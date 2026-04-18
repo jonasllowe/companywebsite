@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jonas Lowe — Tuba | Jonas Lowe Brass</title>
+    <meta
+      name="description"
+      content="Jonas Lowe, tubist — teaching, performances, and contact. jonaslowebrass.com"
+    />
+    <link rel="canonical" href="https://jonaslowebrass.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <p class="site-title"><a href="#">Jonas Lowe</a></p>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#media">Media</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="hero">
+        <p class="hero__label">Tuba</p>
+        <h1>Jonas Lowe</h1>
+        <p class="hero__lede">
+          Professional tuba player and educator — BM in tuba performance from
+          the University of Texas at Austin. Private lessons available; performing
+          at the Mostly Modern Music Festival in Saratoga Springs.
+        </p>
+      </header>
+
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <p>
+          I’ve been playing tuba for twelve years with a focus on solo,
+          chamber, and contemporary repertoire. My training at UT Austin shaped
+          both my playing and my approach to teaching students at their level,
+          with clear goals and a supportive studio culture.
+        </p>
+      </section>
+
+      <section id="teaching" aria-labelledby="teaching-heading">
+        <h2 id="teaching-heading">Teaching</h2>
+        <p>
+          <strong>Private lessons — inquire.</strong> I teach private students
+          at the middle and high school level and welcome inquiries about
+          availability, repertoire, and lesson format.
+        </p>
+      </section>
+
+      <section id="media" aria-labelledby="media-heading">
+        <h2 id="media-heading">Media</h2>
+        <p>
+          Selected performances (embedded from YouTube). Both players below use
+          a placeholder clip so the layout works — edit each iframe’s
+          <code>src</code> in this file to point at your videos.
+        </p>
+        <div class="media-grid">
+          <div class="video-wrap">
+            <iframe
+              title="Performance video 1 (replace with your upload)"
+              src="https://www.youtube.com/embed/jNQXAC9IVRw"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-wrap">
+            <iframe
+              title="Performance video 2 (replace with your upload)"
+              src="https://www.youtube.com/embed/jNQXAC9IVRw"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <p>
+          <a
+            class="channel-link"
+            href="https://www.youtube.com/@YOUR_CHANNEL"
+            >More on YouTube</a
+          >
+        </p>
+        <p class="poc-note">
+          POC note: this repo is a static preview. Production will live on
+          Squarespace — recreate these sections there and swap in real embeds
+          and links.
+        </p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <div class="contact-block">
+          <p>
+            <span class="contact-label">Email</span><br />
+            <a href="mailto:info@jonaslowebrass.com">info@jonaslowebrass.com</a>
+          </p>
+          <p>
+            <span class="contact-label">Phone</span><br />
+            <a href="tel:+15128153087">(512) 815-3087</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        © <span id="year"></span> Jonas Lowe. All rights reserved —
+        <a href="https://jonaslowebrass.com/">jonaslowebrass.com</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

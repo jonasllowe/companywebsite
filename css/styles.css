@@ -1,0 +1,264 @@
+/* Jonas Lowe — static POC (Squarespace migration later) */
+
+:root {
+  --bg: #faf8f5;
+  --bg-elevated: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #5c5a57;
+  --accent: #8b6914;
+  --accent-soft: rgba(139, 105, 20, 0.12);
+  --border: rgba(26, 26, 26, 0.08);
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --space: clamp(1rem, 3vw, 2rem);
+  --max: 42rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+p code {
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.9em;
+  background: var(--accent-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--ink);
+  color: var(--bg);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header__inner {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0.75rem var(--space);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+.site-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+}
+
+main {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4rem) var(--space) clamp(4rem, 10vw, 6rem);
+}
+
+.hero {
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero__label {
+  margin: 0 0 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 500;
+}
+
+.hero__lede {
+  margin: 0;
+  max-width: var(--max);
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+
+section {
+  padding-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+section h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.5rem);
+}
+
+section p {
+  margin: 0 0 1rem;
+  max-width: var(--max);
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+.poc-note {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  background: var(--accent-soft);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  max-width: var(--max);
+}
+
+.media-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .media-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #111;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.channel-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.contact-block {
+  margin-top: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-width: var(--max);
+}
+
+.contact-block p {
+  margin: 0 0 0.75rem;
+}
+
+.contact-block p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.site-footer {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 2rem var(--space) 3rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
